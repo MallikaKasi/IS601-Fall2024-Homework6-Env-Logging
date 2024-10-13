@@ -1,7 +1,43 @@
+import os
+import socket
+import importlib.util
+from dotenv import load_dotenv
 import sys
 from decimal import Decimal, InvalidOperation
 from app.calculator import Calculator
 from app import App
+
+
+# Load environment variables
+load_dotenv()
+
+def get_computer_name():
+    """Get the computer's hostname."""
+    return socket.gethostname()
+
+def set_hostname_in_env():
+    """Set the computer name as the hostname in environment variables."""
+    computer_name = get_computer_name()
+    os.environ['HOSTNAME'] = computer_name
+
+set_hostname_in_env()
+
+def load_environment_variables():
+    settings = {key: value for key, value in os.environ.items()}
+    return settings
+
+settings = load_environment_variables()
+
+def get_environment_variable():
+    return settings.get('ENVIRONMENT')
+
+def get_hostname_variable():
+    settings = load_environment_variables()
+    return settings.get('HOSTNAME')
+
+def print_Env_Variables():
+    print(f"ENVIRONMENT is {get_environment_variable()}")
+    print(f"HOSTNAME is {get_hostname_variable()}")
 
 class OperationCommand:
     def __init__(self, calculator, operation_name, a, b):
@@ -42,7 +78,7 @@ def main():
     else:
         print("        Welcome to Command-Plugin based Calculator Application:    ")
         print("           ")
-        print("Usage of this Calculator:")
+        print("Usage of this Calculator Application:")
         print("    To start the Interactive Calculator: python main.py I ")
         print("    To perform the calculation Using Direct Commamd Line:")
         print("       python main.py <number1> <number2> add")

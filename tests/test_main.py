@@ -88,4 +88,4 @@ def test_main_help_message(capsys):
         main()
     captured = capsys.readouterr()
     assert "        Welcome to Command-Plugin based Calculator Application:    " in captured.out
-    assert "Usage of this Calculator:" in captured.out
+    assert "Usage of this Calculator Application:" in captured.out
