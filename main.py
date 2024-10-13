@@ -69,8 +69,6 @@ def calculate_and_print(a, b, operation_name):
         print(f"An error occurred: {e}")
 
 def main():
-    print(f"Printing Loaded Required Environemnt Variables")
-    print_Env_Variables()
     if len(sys.argv) == 2:
         app_instance = App()  
         app_instance.start()  
