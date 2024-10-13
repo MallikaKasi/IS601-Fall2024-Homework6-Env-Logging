@@ -2,10 +2,10 @@ import pkgutil
 import importlib
 from app.commands import CommandHandler
 from app.commands import Command
+import logging
 
 #from app.plugins.menu import MenuCommand
 import multiprocessing
-#from dotenv import load_dotenv
 import os
 
 
@@ -33,8 +33,8 @@ class App:
             
     def start(self):
         self.load_plugins()
-        print("\nOption To Perform Interative Calculation:")
-        print("        ")
+        #print("\nOption To Perform Interative Calculation:")
+        #print("        ")
         self.command_handler.execute_command("Menu")
 
         choice = input("Choose an option : ")
@@ -73,9 +73,11 @@ class App:
                 elif choice == 'Menu':
                     result = self.command_handler.execute_command('Menu')
                 else:
-                    print("Invalid choice. Please select a valid option.")
+                    logging.info("Invalid choice. Please select a valid option.")
+                    #print("Invalid choice. Please select a valid option.")
             except ZeroDivisionError:
-                print("Error: Division by zero.")
+                    logging.info("Error: Division by zero.")
+                    print("Error: Division by zero.")
             except ValueError as e:
                 print(e)
             except Exception as e:

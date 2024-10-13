@@ -1,5 +1,6 @@
 import importlib
 from abc import ABC, abstractmethod
+import logging
 
 # Command interface definition
 class Command(ABC):
@@ -43,13 +44,14 @@ class CommandHandler:
             raise ValueError(f"Failed to create command: {plugin_name}")
         
     def list_commands(self):
-        print("              ")
-        print("Available Calculator Commands:")
-        print(" ")
+        #print("              ")
+        #print("Available Calculator Commands:")
+        #print(" ")
+        #logging.info(f"Available Menu Options in Interactive Calculator:")
 
         for key in self.commands:
-            print(f"        Type {key} : To Perform {key} Operation ")
-        print(" ")
+            all_commands = '\n\n' + '\n'.join([f"    Type {key} : To Perform {key} Operation" for key in self.commands]) + '\n'
+        logging.info(all_commands)
 
 
     # Creating a dictionary

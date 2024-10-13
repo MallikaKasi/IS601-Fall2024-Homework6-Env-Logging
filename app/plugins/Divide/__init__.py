@@ -1,15 +1,29 @@
+import logging
 from app.commands import Command
 
 class DivideCommand(Command):
     def __init__(self, a, b):
+        """Initialize the DivideCommand with two numbers."""
         self.a = a
         self.b = b
 
     def execute(self):
-        if self.b == 0:
-            raise ValueError("Unable to divide by 0")
-        else:
-            print(f"    The result of Dividing {self.a} / {self.b} = {self.a / self.b}")
+        """Perform division and handle division by zero."""
+        try:
+            if self.b == 0:
+                raise ValueError("Unable to divide by 0")
+            
+            result = self.a / self.b
+            print(f"    The result of Dividing {self.a} / {self.b} = {result}")
+            
+            # Log the result
+            logging.info(f"The result of dividing {self.a} / {self.b} = {result}")
+
+        except ValueError as e:
+            # Log the error and raise it again to notify the caller
+            logging.error(f"Error: {e}")
+            raise
 
 def register():
+    """Register the DivideCommand."""
     return DivideCommand
