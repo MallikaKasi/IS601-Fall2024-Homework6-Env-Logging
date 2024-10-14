@@ -50,6 +50,18 @@ To run the Interactive Calculator: python main.py I
 
 To perfomr the calculation directly from Command Line:  python main.py 2 3 add
 
+## Environmental Variables
+Environmental Variables are used in the main.py. Environmental variables are loaded from the .env file. Environmental variables are also used in the configure_logging method. logging_conf_path is an environmental variable and is used to determine the path to the logging config file.
+
+![image](https://github.com/user-attachments/assets/dca9f425-ccbd-4034-a74e-e6b0df8b9432)
+![image](https://github.com/user-attachments/assets/6be590a2-7f6e-412c-a9a2-2e261b2a7036)
+![image](https://github.com/user-attachments/assets/e2372103-615f-41c4-9bc8-0472a1c01e89)
+
+## Logging
+Logging is used print INFO , WARNING and Error messages. Info letting them know how the interactive calculator works and how to execute the list of commnds in the menu options. Logging is also used as a warning and sends them an error message if they input an invalid command. Examples are shown below.
+![image](https://github.com/user-attachments/assets/9621dba2-8c70-4074-aa03-4f7854c20787)
+
+![image](https://github.com/user-attachments/assets/70acd646-0cdf-41e5-a7ec-5e1250ed4ac2)
 
 ### Test Results:
 
