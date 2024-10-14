@@ -33,15 +33,12 @@ class App:
             
     def start(self):
         self.load_plugins()
-        #print("\nOption To Perform Interative Calculation:")
-        #print("        ")
         self.command_handler.execute_command("Menu")
 
         choice = input("Choose an option : ")
         while True:   #REPL Read, Evaluate, Print, Loop
             try:
                 if choice == 'C':
-                    #self.command_handler.execute_command("Menu")
                     choice = input("Choose an option : ")
                     continue
                 elif choice == 'Add':
@@ -73,10 +70,9 @@ class App:
                 elif choice == 'Menu':
                     result = self.command_handler.execute_command('Menu')
                 else:
-                    logging.info("Invalid choice. Please select a valid option.")
-                    #print("Invalid choice. Please select a valid option.")
+                    logging.warning("Invalid choice. Please select a valid option.")
             except ZeroDivisionError:
-                    logging.info("Error: Division by zero.")
+                    logging.error("Error: Division by zero.")
                     print("Error: Division by zero.")
             except ValueError as e:
                 print(e)

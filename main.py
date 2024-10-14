@@ -67,6 +67,7 @@ class OperationCommand:
         if operation_method:
             return operation_method(self.a, self.b)
         else:
+            logging.error(f"Unknown operation: {self.operation_name}")
             raise ValueError(f"Unknown operation: {self.operation_name}")
 
 def calculate_and_print(a, b, operation_name):
@@ -81,16 +82,17 @@ def calculate_and_print(a, b, operation_name):
 
     except InvalidOperation:
         print(f"Invalid number input: {a} or {b} is not a valid number.")
-        logging.info("Invalid number input: {a} or {b} is not a valid number.")
+        logging.error("Invalid number input: {a} or {b} is not a valid number.")
        
     except ZeroDivisionError:
         print("Error: Division by zero.")
-        logging.info("Error: Division by zero.")
+        logging.error("Error: Division by zero.")
 
     except ValueError as e:
         print(e)
     except Exception as e:
-        print(f"An error occurred: {e}")
+        #print(f"An error occurred: {e}")
+        logging.error(f"An error occurred: {e}")
 
 def main():
     """Main function to run the application."""
@@ -108,7 +110,7 @@ def main():
             logging.info("Welcome to Interactive Calculator Application:")
             print(f"Incorrect Number of arguments , So Exiting the Application")
 
-            logging.info(""" Incorrect Number of arguments , So Exiting the Application
+            logging.error(""" Incorrect Number of arguments , So Exiting the Application
                     
                     Correct Usage of this Calculator Application:
                      
