@@ -26,6 +26,14 @@ Implemented Greet and Exit Commands
 
 Uses Plugin architecture to dynamically load new plugins.
 
+Added Loading Environment Variables
+
+Logging using Logger library
+
+Continuous Integration
+
+Added workflow in GitHub Actions to run tests on GitHub automaticly
+
 ### Testing Commands:
 
 pytest 
@@ -45,9 +53,9 @@ To perfomr the calculation directly from Command Line:  python main.py 2 3 add
 
 ### Test Results:
 
-Add test Result Image
+![image](https://github.com/user-attachments/assets/1dc929b9-acb1-4eb2-af0d-e08c35ef9678)
+![image](https://github.com/user-attachments/assets/6d483887-aff6-4e55-a44f-ccd181d81bf5)
+![image](https://github.com/user-attachments/assets/cc98b3c3-321b-4110-877d-8d445faaa142)
 
-Add
-Add
-Add
+
 
