@@ -1,13 +1,10 @@
-## Welcome to Command-Plugin based Calculator Application With Environment Variables Loading Concept
+## Welcome to Command-Plugin based Interactive Calculator Application With Environment Variables Loading , Logging and Continuous Integration Concepts Added
 
-This is the interactive Calculator that performs 
+This is the interactive Calculator that performs the functions
 
 Addition
-
 Subtraction
-
 Multiplication
-
 Division
 
 ### This Calclulatore can run in 2 modes
