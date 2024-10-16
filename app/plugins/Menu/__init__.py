@@ -9,6 +9,7 @@ class MenuCommand(Command):
         self.command_handler = command_handler
 
     def execute(self):
+        logging.info(f"Invoked Menu Operation")
         logging.info(f"Listing Below the Available Menu Commands in Calculator Application")
         self.command_handler.list_commands()
 
