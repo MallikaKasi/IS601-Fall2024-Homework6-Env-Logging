@@ -13,6 +13,8 @@ class AddCommand(Command):
         print(f"    The result of adding {self.a} + {self.b} = {result}")
         
         # Proper f-string usage for logging
+        logging.info(f"Invoked Add Operation")
+
         logging.info(f"The result of adding {self.a} + {self.b} = {result}")
 
 def register():

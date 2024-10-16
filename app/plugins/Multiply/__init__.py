@@ -13,6 +13,7 @@ class MultiplyCommand(Command):
         print(f"    The result of Multiplying {self.a} * {self.b} = {result}")
         
         # Log the multiplication result
+        logging.info(f"Invoked Multiply Operation")
         logging.info(f"    The result of multiplying {self.a} * {self.b} is {result}")
 
 def register():

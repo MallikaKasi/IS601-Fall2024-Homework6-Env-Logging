@@ -13,6 +13,7 @@ class SubtractCommand(Command):
         print(f"    The result of Subtracting {self.a} - {self.b} = {result}")
         
         # Log the subtraction result
+        logging.info(f"Invoked Subtract Operation")
         logging.info(f"    The result of subtracting {self.a} - {self.b} is {result}")
 
 def register():
