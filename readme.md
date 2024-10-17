@@ -28,6 +28,8 @@ Uses Plugin architecture to dynamically load new plugins.
 
 Uses .env file to set environment variables
 
+Uses ICECREAM package in the Divide and Greet Plugins
+
 Logging using Logger library.These logging statements will help us to trace the flow of the program and identify any issues.
 
 Continuous Integration using GitHub Actions workflow to run tests on GitHub automatically.
