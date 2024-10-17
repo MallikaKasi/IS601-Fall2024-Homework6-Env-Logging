@@ -1,5 +1,6 @@
 import logging
 from app.commands import Command
+from icecream import ic
 
 class DivideCommand(Command):
     def __init__(self, a, b):
@@ -19,6 +20,7 @@ class DivideCommand(Command):
             # Log the result
             logging.info(f"Invoked Divide Operation")
             logging.info(f"The result of dividing {self.a} / {self.b} = {result}")
+            logging.info(f"Division Reslult is : {ic(self.a / self.b)}")
 
         except ValueError as e:
             # Log the error and raise it again to notify the caller
